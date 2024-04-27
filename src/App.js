@@ -9,8 +9,12 @@ function App() {
   return (
     <div className="App">
         <h1>Hello, click on the button to open the modal.</h1>
-        <button className='openModalBtn' onClick={() => {setOpenModal(true);}}>open</button>
-        <Modal/>
+        <button 
+          className='openModalBtn' 
+          onClick={() => {
+            setOpenModal(true);
+          }}>open</button>
+        {openModal && <Modal closeModal={setOpenModal}/>}
     </div>
   );
 }

@@ -1,8 +1,8 @@
-function Modal() {
+function Modal({closeModal}) {
     return(
         <div className="modalBackground">
             <div className="modelContainer">
-                <button> X </button>
+                <button onClick={() => closeModal(false)}> X </button>
                 <div className="title">
                     <h1>Are you sure you want to continue ?</h1>
                 </div>
@@ -12,7 +12,7 @@ function Modal() {
                     </p>
                 </div>
                 <div className="footer">
-                    <button>Cancel</button>
+                    <button onClick={() => closeModal(false)}>Cancel</button>
                     <button>continue</button>
                 </div>
             </div>
